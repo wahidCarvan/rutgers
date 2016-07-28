@@ -10,16 +10,14 @@
 </div>
 
 <script type="text/javascript">
-// makes a variable for the computer guesses
 var computerChoices = ['r', 'p', 's'];
-// listens for key clicks
 document.onkeyup = function(event) {
-  // turns the users key clicks to lowercase
   var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-  // math. floor turns deciamal numbers into whole numbers math.random generates a random number
   var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-  alert("user guess: " + userGuess);
-  alert("computer guess: " + computerGuess);
+  if ((userGuess == 'r') || (userGuess == 'p') || (userGuess == 's')){
+    // selects the id with game on the page and displays the users guess with the computers guess
+    document.querySelector('#game').innerHTML = 'you chose: ' + userGuess + '. The computer chose: ' + computerGuess;
+  }
 }
 </script>
 </body>
