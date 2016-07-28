@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Favorite Bands</title>
+</head>
+<body>
+
+  <script>
+    // Created an Array Named myBands
+    var myBands = ['jay-z','pac','big'];
+   
+    // Created a Prompt
+   var userGuess = prompt("which band do you like?")
+    // Convert to lowercase
+    var userGuessLower = userGuess.toLowerCase();
+    // Check Array
+    // If it's not in the array... 
+    if(myBands.indexOf(userGuessLower)== -1){
+      document.write("they suck.")
+    } else { 
+      document.write("I love them to.")
+    };
+    
+  </script> 
+
+</body>
+</html>
